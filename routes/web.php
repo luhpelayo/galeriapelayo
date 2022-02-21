@@ -28,6 +28,7 @@ Route::get('noticia/{id}' , [ 'uses' => 'Web\NoticiaController@Noticia' ])->name
 
 
 Route::get('bolsa_de_trabajo/{id}' , [ 'uses' => 'Web\Bolsa_de_trabajoController@Bolsa_de_trabajo' ])->name('bolsa_de_trabajo');
+Route::get('indexphoto/{id}' , [ 'uses' => 'Web\GalleryController@indexphoto' ])->name('indexphoto');
 
 Route::get('noticias' , [ 'uses' => 'Web\NoticiaController@indexInformativa' ])->name('noticias');
 Route::get('eventos' , [ 'uses' => 'Web\EventoController@indexInformativa' ])->name('eventos');

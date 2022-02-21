@@ -34,7 +34,9 @@
                                 @foreach ($galerias->photos as $phot)
                                     <div class="single_facilities col-md-4 col-xs-12 p0 adversting webdesign adversting">
                                         <div class="single_facilities_inner">
-                                            <img style="padding: 10px;" src="{{ asset($phot->path) }}" alt="" height="400" width="400" >
+                                      
+                                        <a href="{{route('indexphoto',$phot->id)}}" style="color: #222222"><b>{{ $phot->title}} </b> </a>
+                                            <img  style="padding: 10px;" src="{{ asset($phot->path) }}" alt="" height="400" width="400" >
                                         </div>
                                     </div>
                                 @endforeach

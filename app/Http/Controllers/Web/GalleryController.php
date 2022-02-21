@@ -29,4 +29,17 @@ class GalleryController extends Controller
 
       return view('store.gallery.gallery' , ['galerias'=>$galerias,'galleries' => $galleries,'pho' => $pho]);
     } 
+
+    public function indexphoto($id)
+    {
+
+        $photos = Photo::where('id',$id)->first();
+    
+       // dd($photos);
+    
+    
+
+        
+        return view('store.gallery.indexphoto' , ['pho' => $photos]);
+    }
 }
