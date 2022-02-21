@@ -47,10 +47,7 @@
               <label for="Lon">Lon:</label>
               <h2>{{ $solicitante->lon }}</h2>
           </div>
-          <div class="form-group col-xs-6">
-              <label for="lat">GPS LACTIUD Y LONGITUD ACtUAL:</label>
-              <h2>{{ $solicitante->lat }} , {{ $solicitante->lon }}</h2>
-          </div>
+       
           <div class="form-group col-xs-6">
               <label for="direccion">Direccion:</label>
               <h2>{{ $solicitante->direccion }}</h2>
@@ -61,7 +58,22 @@
               <label for="email">Email:</label>
               <h2>{{ $solicitante->email }}</h2>
           </div>
-       
+          <div class="form-group col-xs-6">
+              <label for="lat">GPS LATITUD Y LONGITUD ACTUAL :</label>
+              <h2>{{ $geoip }}</h2>
+              {!! 
+                      Form::text(
+                          $geoip, 
+                          null, 
+                          array(
+                              'class'=>'form-control',
+                              'placeholder' => $geoip,
+                                'autofocus' => 'autofocus'
+                          )
+                      ) 
+              !!}
+            
+          </div>
 
             <div class="box-body col-xs-12">
                 {!! Form::submit('Actualizar', array('class'=>'btn btn-primary')) !!}
